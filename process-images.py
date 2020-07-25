@@ -20,5 +20,6 @@ for filename in unedited_files:
     with Image.open(filename).convert('RGB') as im:
         # Rotate the image 90 degrees anti-clockwise and resize to 128x128
         new_im = im.rotate(270).resize((128,128))
-        # Save the image to the new file location and change it to JPEG
+        # Save the image to the new file location and change it to JPEG        
+        # Update "./finished_images/" to the directory you want to save images to
         new_im.save('./finished_images/'+filename[9:], "JPEG")
